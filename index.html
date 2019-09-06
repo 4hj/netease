@@ -3,10 +3,11 @@
 <body>
 <script>
     var xhr = new XMLHttpRequest()
-    xhr.open('GET','/netease/cate.json',true)
+    xhr.open('GET','/hello.json',true)
     xhr.send()
-    xhr.onload = function(data){
-        console.log(data)
+    xhr.addEventListener('load',function(){
+        var date = xhr.responseText;
+        console.log(date)
     })
-    </script>
+</script>
 </body>
